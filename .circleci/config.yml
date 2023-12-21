@@ -24,5 +24,11 @@ jobs:
 workflows:
   Benchmarks:
     jobs:
-      - docker-medium-benchmark
-      - docker-large-benchmark
+      - docker-medium-benchmark:
+          filters:
+            branches:
+              only: circle-benchmark
+      - docker-large-benchmark:
+          filters:
+            branches:
+              only: circle-benchmark
