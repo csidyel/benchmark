@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - github-actions-benchmark
+  schedule:
+    # Runs every day.
+    - cron:  '0 0 * * *'      
 jobs:
   Benchmark:
     runs-on: ubuntu-20.04
