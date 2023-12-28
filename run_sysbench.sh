@@ -5,7 +5,7 @@ AGENT_TYPE=$2
 
 
 run_cpu_test() {
-  THREADS=(1 2 100)
+  THREADS=(1 2 4 100)
   for t in ${THREADS[@]}; do
     BENCHMARK_NAME="CPU_T$t"
     echo "Running CPU benchmark - num of threads: $t"
@@ -15,7 +15,7 @@ run_cpu_test() {
 }
 
 run_file_io_test(){
-  THREADS=(1 2 100)
+  THREADS=(1 2 4 100)
   for t in ${THREADS[@]}; do
     BENCHMARK_NAME="IO_10G_T$t"
     sysbench --test=fileio --file-total-size=10G prepare
@@ -29,7 +29,7 @@ run_file_io_test(){
 }
 
 run_memeory_test(){
-  THREADS=(1 2 100)
+  THREADS=(1 2 4 100)
   for t in ${THREADS[@]}; do
     BENCHMARK_NAME="MEM_10G_T$t"
     rw=$(sysbench memory --num-threads=$t --memory-total-size=10G run | grep 'transferred' | tr '()' '\n' | grep 'MiB/sec' | cut -d " " -f 1)
