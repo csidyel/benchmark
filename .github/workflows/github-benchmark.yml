@@ -10,7 +10,7 @@ jobs:
       - run: uname -a
       - run: sudo dmidecode -s system-manufacturer
       - run: sudo dmidecode -s system-product-name
-      - run: lshw -class system
+      - run: sudo lshw -class system
       - run: hostnamectl
 
 
