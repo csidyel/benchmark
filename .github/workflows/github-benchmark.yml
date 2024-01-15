@@ -1,18 +1,11 @@
 name: GitHub Actions Benchmark
-on:
-  push:
-    branches:
-      - github-actions-benchmark
-  schedule:
-    # Runs every day.
-    - cron:  '0 0 * * *'      
+on: [push]
 jobs:
   Benchmark:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - run: bash sysbench_setup.sh
-      - run: bash run_sysbench.sh cpu linux
-      - run: bash run_sysbench.sh io linux
-      - run: bash run_sysbench.sh mem linux
+      - run: cat /proc/cpuinfo
+      - run: cat /proc/meminfo
+      - run: mount
+      - run: uname -a
+
