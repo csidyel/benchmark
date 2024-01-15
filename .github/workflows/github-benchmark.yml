@@ -8,4 +8,10 @@ jobs:
       - run: cat /proc/meminfo
       - run: mount
       - run: uname -a
+      - run: sudo dmidecode -s system-manufacturer
+      - run: sudo dmidecode -s system-product-name
+      - run: lshw -class system
+      - run: hostnamectl
+
+
 
