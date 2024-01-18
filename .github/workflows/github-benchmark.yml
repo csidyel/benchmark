@@ -11,7 +11,7 @@ jobs:
       - run: sudo dmidecode -s system-manufacturer
       - run: sudo dmidecode -s system-product-name
       - run: sudo lshw -class system
-      - run: hostnamectl
+      # run: hostnamectl
 
 
 
