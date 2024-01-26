@@ -20,5 +20,5 @@ workflows:
       - docker-medium-benchmark:
           filters:
             branches:
-              only: circle-benchmark
+              only: circle-get-info
 
