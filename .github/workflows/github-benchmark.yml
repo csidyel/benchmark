@@ -2,13 +2,10 @@ name: GitHub Actions Benchmark
 on:
   push:
     branches:
-      - github-actions-benchmark
-  schedule:
-    # Runs every day.
-    - cron:  '0 0 * * *'      
+      - github-actions-benchmark 
 jobs:
   Benchmark:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04-arm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
