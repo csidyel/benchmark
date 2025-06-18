@@ -6,7 +6,6 @@ jobs:
     steps:
       - run: cat /proc/cpuinfo
       - run: cat /proc/meminfo
-      - run: mount
       - run: uname -a
       - run: sudo dmidecode -s system-manufacturer
       - run: sudo dmidecode -s system-product-name
