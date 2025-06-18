@@ -10,7 +10,6 @@ jobs:
       - run: cat /proc/cpuinfo
       - run: cat /proc/meminfo
       - run: uname -a
-      - run: sudo lshw -class system    
       - run: bash run_sysbench.sh cpu arm.medium
       - run: bash run_sysbench.sh io arm.medium
       - run: bash run_sysbench.sh mem arm.medium
@@ -24,7 +23,6 @@ jobs:
       - run: cat /proc/cpuinfo
       - run: cat /proc/meminfo
       - run: uname -a
-      - run: sudo lshw -class system      
       - run: bash run_sysbench.sh cpu arm.large
       - run: bash run_sysbench.sh io arm.large
       - run: bash run_sysbench.sh mem arm.large
