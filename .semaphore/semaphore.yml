@@ -5,7 +5,7 @@ agent:
     os_image: ubuntu2204
     type: f1-standard-2
 blocks:
-  - name: 'Sysbench CPU,IO,MEM - f1-standard-2 ubuntu2404'
+  - name: 'Sysbench CPU,IO,MEM - r1-standard-4 ubuntu2204'
     dependencies: []
     task:
       agent:
@@ -20,78 +20,3 @@ blocks:
             - bash run_sysbench.sh cpu r1-standard-4
             - bash run_sysbench.sh io r1-standard-4
             - bash run_sysbench.sh mem r1-standard-4
-  # - name: 'Sysbench CPU,IO,MEM - e2-standard-2 ubuntu2004'
-  #   dependencies: []
-  #   task:
-  #     agent:
-  #       machine:
-  #         os_image: ubuntu2004
-  #         type: e2-standard-2
-  #     jobs:
-  #       - name: e2-standard-2
-  #         commands:
-  #           - checkout
-  #           - bash sysbench_setup.sh
-  #           - bash run_sysbench.sh cpu e2-standard-2
-  #           - bash run_sysbench.sh io e2-standard-2
-  #           - bash run_sysbench.sh mem e2-standard-2
-  # - name: 'Sysbench CPU,IO,MEM - e1-standard-2 ubuntu2004'
-  #   dependencies: []
-  #   task:
-  #     agent:
-  #       machine:
-  #         os_image: ubuntu2004
-  #         type: e1-standard-2
-  #     jobs:
-  #       - name: e1-standard-2
-  #         commands:
-  #           - checkout
-  #           - bash sysbench_setup.sh
-  #           - bash run_sysbench.sh cpu e1-standard-2
-  #           - bash run_sysbench.sh io e1-standard-2
-  #           - bash run_sysbench.sh mem e1-standard-2
-  # - name: 'Sysbench CPU,IO,MEM - f1-standard-4 ubuntu2004'
-  #   dependencies: []
-  #   task:
-  #     agent:
-  #       machine:
-  #         os_image: ubuntu2004
-  #         type: f1-standard-4
-  #     jobs:
-  #       - name: f1-standard-4
-  #         commands:
-  #           - checkout
-  #           - bash sysbench_setup.sh
-  #           - bash run_sysbench.sh cpu f1-standard-4
-  #           - bash run_sysbench.sh io f1-standard-4
-  #           - bash run_sysbench.sh mem f1-standard-4
-  # - name: 'Sysbench CPU,IO,MEM - e2-standard-4 ubuntu2004'
-  #   dependencies: []
-  #   task:
-  #     agent:
-  #       machine:
-  #         os_image: ubuntu2004
-  #         type: e2-standard-4
-  #     jobs:
-  #       - name: e2-standard-4
-  #         commands:
-  #           - checkout
-  #           - bash sysbench_setup.sh
-  #           - bash run_sysbench.sh cpu e2-standard-4
-  #           - bash run_sysbench.sh io e2-standard-4
-  #           - bash run_sysbench.sh mem e2-standard-4
-  # - name: 'Sysbench CPU,IO,MEM - e1-standard-4 ubuntu2004'
-  #   dependencies: []
-  #   task:
-  #     agent:
-  #       machine:
-  #         os_image: ubuntu2004
-  #         type: e1-standard-4
-  #     jobs:
-  #       - name: e1-standard-4
-  #         commands:
-  #           - checkout
-  #           - bash sysbench_setup.sh
-  #           - bash run_sysbench.sh cpu e1-standard-4
-  #           - bash run_sysbench.sh io e1-standard-4
-  #           - bash run_sysbench.sh mem e1-standard-4
